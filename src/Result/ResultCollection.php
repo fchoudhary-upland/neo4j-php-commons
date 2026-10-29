@@ -97,7 +97,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->position = 0;
     }
@@ -105,7 +105,7 @@ class ResultCollection implements \Iterator
     /**
      * @return RecordCursorInterface
      */
-    public function current()
+    public function current(): void
     {
         return $this->results[$this->position];
     }
@@ -113,7 +113,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function key()
+    public function key(): void
     {
         return $this->position;
     }
@@ -121,7 +121,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function next()
+    public function next(): void
     {
         ++$this->position;
     }
@@ -129,7 +129,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function valid()
+    public function valid(): void
     {
         return isset($this->results[$this->position]);
     }
