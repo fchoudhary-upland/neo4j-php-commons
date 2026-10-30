@@ -105,7 +105,7 @@ class ResultCollection implements \Iterator
     /**
      * @return RecordCursorInterface
      */
-    public function current(): void
+    public function current(): mixed
     {
         return $this->results[$this->position];
     }
@@ -113,7 +113,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function key(): void
+    public function key(): mixed
     {
         return $this->position;
     }
@@ -129,7 +129,7 @@ class ResultCollection implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function valid(): void
+    public function valid(): bool
     {
         return isset($this->results[$this->position]);
     }
